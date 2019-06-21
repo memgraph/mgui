@@ -1,0 +1,22 @@
+{
+  "name": "@memgraph/ngx-ui",
+  "version": "0.1.0",
+  "description": "Memgraph Angular user interface library.",
+  "author": "Marko Budiselic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/memgraph/mgui.git"
+  },
+  "homepage": "https://github.com/memgraph/mgui",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@angular/common": "^8.0.1",
+    "@angular/core": "^8.0.1"
+  }
+}
