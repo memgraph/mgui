@@ -9,9 +9,7 @@ export class ViewTitleComponent implements OnInit {
 
   @Input() title: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

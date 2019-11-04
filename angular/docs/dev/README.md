@@ -19,6 +19,8 @@ To implement the library, the following commands are useful
 ng build {{lib_name}}
 ng test {{lib_name}}
 ng lint {{lib_name}}
+npm run playground
+
 ```
 
 To publish the library, the following commands are useful
@@ -29,6 +31,13 @@ npm adduser
 cd dist/{{lib_name}}
 npm publish --access public
 ```
+
+## Installing package from a local folder
+
+IMPORTANT: If project uses this library from the local folder, `angular.json`
+has to contain `"preserveSymlinks": true,` under `architect -> build ->
+options`. If that's not the case, Angular directives in the library components
+like `ngIf`, `ngFor` won't work.
 
 ## Resources
 

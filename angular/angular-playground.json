@@ -1,0 +1,6 @@
+{
+  "sourceRoots": ["./projects/ngx-ui/src"],
+  "angularCli": {
+    "appName": "playground"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@memgraph/ngx-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Memgraph Angular user interface library.",
   "author": "Marko Budiselic",
   "repository": {

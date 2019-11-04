@@ -1,0 +1,31 @@
+<div class="pagination-container">
+  <ul class="pagination">
+    <li class="pagination-previous" (click)="changePage(currentPage - 1)" *ngIf="currentPage !== 1">
+      <a>Previous <span class="show-for-sr">page</span></a>
+    </li>
+    <li class="pagination-previous disabled" *ngIf="currentPage === 1">
+      Previous <span class="show-for-sr">page</span>
+    </li>
+    <li *ngIf="currentPage != 1"><a (click)="changePage(1)">1</a></li>
+    <li class="ellipsis" *ngIf="leftEllipsis"></li>
+    <li *ngFor="let left of leftPages">
+      <a (click)="changePage(left)">
+        {{left}}
+      </a>
+    </li>
+    <li class="current">{{currentPage}}</li>
+    <li *ngFor="let right of rightPages">
+      <a (click)="changePage(right)">
+        {{right}}
+      </a>
+    </li>
+    <li class="ellipsis" *ngIf="rightEllipsis"></li>
+    <li *ngIf="currentPage != totalPages && totalPages > 0"><a (click)="changePage(totalPages)">{{totalPages}}</a></li>
+    <li class="pagination-next" (click)="changePage(currentPage + 1)" *ngIf="currentPage !== totalPages && totalPages > 0">
+      <a aria-label="Next page">Next <span class="show-for-sr">page</span></a>
+    </li>
+    <li class="pagination-next disabled" *ngIf="currentPage === totalPages || totalPages === 0">
+      Next <span class="show-for-sr">page</span>
+    </li>
+  </ul>
+</div>

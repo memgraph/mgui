@@ -37,6 +37,56 @@
           }
         }
       }
-    }},
+    },
+    "playground": {
+      "root": "projects/ngx-ui",
+      "sourceRoot": "projects/ngx-ui/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/playground",
+            "index": "projects/ngx-ui/src/index.html",
+            "main": "projects/ngx-ui/src/main.playground.ts",
+            "polyfills": "projects/ngx-ui/src/polyfills.ts",
+            "tsConfig": "projects/ngx-ui/tsconfig.lib.json",
+            "assets": [
+              "projects/ngx-ui/src/favicon.ico",
+              "projects/ngx-ui/src/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-ui/src/environments/environment.ts",
+                  "with": "projects/ngx-ui/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "playground:build",
+            "port": 4201
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "NgxUi"
 }
